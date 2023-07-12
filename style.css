@@ -1,6 +1,14 @@
 .grid-container{
-    width:800px;
-    height:800px;
+    width:576px;
+    height:576px;
     border-style:solid;
     border-color:black;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.square{
+    width:36px; /* change in js */
+    height:36px; /* change in js */
+    box-shadow:0 0 0 1px red;
 }
