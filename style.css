@@ -8,7 +8,8 @@
 }
 
 .square{
-    width:36px; /* change in js */
-    height:36px; /* change in js */
+    /* width:36px;
+    height:36px; */
     box-shadow:0 0 0 1px red;
+    background-color:white;
 }
