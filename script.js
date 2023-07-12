@@ -7,7 +7,7 @@ let dimension=16;//can be changed by user
 let squareWidth=Math.floor(GRID_WIDTH/dimension);
 console.log("square width: "+squareWidth);//remove
 
-for (let i=0;i<GRID_WIDTH;i+=squareWidth){
+for (let i=0;i<GRID_WIDTH*dimension;i+=squareWidth){
     const square=document.createElement("div");
     square.classList.add("square");
     gridContainer.appendChild(square);
