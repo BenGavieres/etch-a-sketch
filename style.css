@@ -8,6 +8,6 @@
 }
 
 .square{
-    box-shadow:0 0 0 1px red;
+    box-shadow:0 0 0 1px rgb(107 118 135);
     background-color:white;
 }
