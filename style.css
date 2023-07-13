@@ -7,7 +7,7 @@
     padding:90px;
     display:flex;
     border-radius:100px;
-    margin:100px 400px;
+    margin:20px 400px;
     flex-wrap:wrap-reverse;
     justify-content:space-between;
     align-items:center;
@@ -20,6 +20,7 @@ body{
 .header{
     font-size:50px;
     text-align:center;
+    padding:16px;
 }
 
 .controls{
@@ -39,8 +40,12 @@ body{
     min-width:150px;
     height:75px;
     margin-right:16px;
+    background-color:white;
 }
 
+.selected{
+    background-color:#2bff00;
+}
 
 .grid-container{
     width:400px;
