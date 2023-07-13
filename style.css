@@ -6,7 +6,10 @@
     background-color:#bababa;
     padding:60px;
     display:flex;
-
+    border-radius:100px;
+    margin:100px 400px;
+    flex-wrap:wrap-reverse;
+    justify-content:space-between;
 }
 
 body{
@@ -14,17 +17,37 @@ body{
 }
 
 .header{
-    font-style
+    font-size:50px;
+    text-align:center;
 }
+
+.controls{
+    display:flex;
+    flex-direction:column;
+    gap:65px;
+    align-items:left;
+}
+
+.color-picker{
+    display:flex;
+    align-items:center;
+}
+
+#color, button{
+    min-width:100px;
+    height:75px;
+}
+
 
 .grid-container{
     width:576px;
     height:576px;
-    border-style:solid;
-    border-color:black;
     display:flex;
     flex-wrap:wrap;
-    flex-shrink:0;
+    flex: 0 0 auto;
+    border-style:solid;
+    border-color:black;  
+    border-width:4px;
 }
 
 .square{

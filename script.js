@@ -5,8 +5,8 @@ GRID_WIDTH=parseInt(GRID_PIXELS,10);//removes "px" from end of GRID_PIXELS strin
 
 let inRow=16;//can be changed by user
 let squareWidth=Math.floor(GRID_WIDTH/inRow);
+let color="#000000"//can be changed by user
 
-let color="#000000"//can be changed by user;
 
 for (let i=0;i<inRow**2;i++){
     const square=document.createElement("div");
@@ -25,6 +25,8 @@ for (let i=0;i<inRow**2;i++){
 //variables for color picker
 const colorPicker=document.querySelector("input");
 const colorOutput=document.querySelector("label");
+
+colorOutput.innerText=colorPicker.value;
 
 addEventListener("input",event=>{
     colorOutput.innerText=colorPicker.value;
