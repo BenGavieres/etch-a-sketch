@@ -13,12 +13,14 @@ const colorOutput=document.querySelector("label");
 const colorBtn=document.querySelector("button.color");
 const erase=document.querySelector("button.erase");
 const clear=document.querySelector("button.clear");
-const rainbow=document.querySelector("button.random-color");
+const rainbow=document.querySelector("button.rainbow");
 const resize=document.querySelector("button.resize");
 
 let isColorMode=true;
 let isEraseMode=false;
+let isRainbowMode=false;
 let squares;
+const hexChars="0123456789ABCDEF";
 
 //gen grid
 function generateGrid(){
@@ -38,6 +40,14 @@ function generateGrid(){
             }
             else if (isEraseMode){
                 square.style.backgroundColor="white";
+            }
+            else {
+                //chooses a random color
+                color = '#';
+                    for (let i = 0; i < 6; i++) {
+                  color += hexChars[Math.floor(Math.random() * 16)];
+                }
+                square.style.backgroundColor=color;
             }
         });
     }
@@ -62,16 +72,20 @@ colorBtn.addEventListener("click",()=>{
     color=colorPicker.value;
     isColorMode=true;
     isEraseMode=false;
+    isRainbowMode=false;
     colorBtn.classList.add("selected");
     erase.classList.remove("selected");
+    rainbow.classList.remove("selected");
 })
 
 //erase
 erase.addEventListener("click",()=>{
     isColorMode=false;
     isEraseMode=true;
+    isRainbowMode=false;
     colorBtn.classList.remove("selected");
     erase.classList.add("selected");
+    rainbow.classList.remove("selected");
 });
 
 //clear
@@ -81,6 +95,16 @@ clear.addEventListener("click",()=>{
     squares.forEach((sqr)=>{
         sqr.style.backgroundColor="white";
     });
+});
+
+//rainbow
+rainbow.addEventListener("click",()=>{
+    isColorMode=false;
+    isEraseMode=false;
+    isRainbowMode=true;
+    colorBtn.classList.remove("selected");
+    erase.classList.remove("selected");
+    rainbow.classList.add("selected");
 });
 
 //resize
