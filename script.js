@@ -75,10 +75,10 @@ erase.addEventListener("click",()=>{
 //resize
 resize.addEventListener("click",()=>{
     do{
-        inRow=prompt("Enter new grid width/height (1-100)");
-        inRow=parseInt(inRow);
+        inRow=prompt("Enter new grid width/height (1-100)");  
+        inRow=Number(inRow);
         console.log(inRow);
-    }while (isNaN(inRow)||inRow<1||inRow>100);
+    }while (Number.isInteger(inRow)===false||inRow<1||inRow>100);
     degenerateGrid();
     generateGrid();
 })
