@@ -4,6 +4,9 @@
 
 body{
     background-color:rgb(107 118 135);
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 .header{
@@ -59,4 +62,10 @@ body{
 .square{
     box-shadow:0 0 0 1px rgb(107 118 135);
     background-color:white;
+}
+
+.footer{
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
