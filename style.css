@@ -4,12 +4,13 @@
 
 .container{
     background-color:#bababa;
-    padding:60px;
+    padding:90px;
     display:flex;
     border-radius:100px;
     margin:100px 400px;
     flex-wrap:wrap-reverse;
     justify-content:space-between;
+    align-items:center;
 }
 
 body{
@@ -26,6 +27,7 @@ body{
     flex-direction:column;
     gap:65px;
     align-items:left;
+    justify-content:center;
 }
 
 .color-picker{
@@ -34,17 +36,18 @@ body{
 }
 
 #color, button{
-    min-width:100px;
+    min-width:150px;
     height:75px;
+    margin-right:16px;
 }
 
 
 .grid-container{
-    width:576px;
-    height:576px;
+    width:400px;
+    height:400px;
     display:flex;
     flex-wrap:wrap;
-    flex: 0 0 auto;
+    flex-shrink:0;
     border-style:solid;
     border-color:black;  
     border-width:4px;
