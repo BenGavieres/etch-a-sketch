@@ -12,15 +12,17 @@ const colorOutput=document.querySelector("label");
 
 const colorBtn=document.querySelector("button.color");
 const erase=document.querySelector("button.erase");
-const resize=document.querySelector("button.resize");
+const clear=document.querySelector("button.clear");
 const rainbow=document.querySelector("button.random-color");
+const resize=document.querySelector("button.resize");
 
 let isColorMode=true;
 let isEraseMode=false;
+let squares;
 
 //gen grid
 function generateGrid(){
-    squareWidth=Math.floor(GRID_WIDTH/inRow);
+    squareWidth=parseInt((GRID_WIDTH/inRow));
     for (let i=0;i<inRow**2;i++){
         const square=document.createElement("div");
         square.classList.add("square");
@@ -72,16 +74,24 @@ erase.addEventListener("click",()=>{
     erase.classList.add("selected");
 });
 
+//clear
+clear.addEventListener("click",()=>{
+    squares=document.querySelectorAll(".square");
+    console.log(squares.length);
+    squares.forEach((sqr)=>{
+        sqr.style.backgroundColor="white";
+    });
+});
+
 //resize
 resize.addEventListener("click",()=>{
     do{
         inRow=prompt("Enter new grid width/height (1-100)");  
         inRow=Number(inRow);
-        console.log(inRow);
     }while (Number.isInteger(inRow)===false||inRow<1||inRow>100);
     degenerateGrid();
     generateGrid();
-})
+});
 
 generateGrid();
 
