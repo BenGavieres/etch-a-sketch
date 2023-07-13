@@ -49,10 +49,8 @@ function degenerateGrid() {
 }
 
 //color picker
-colorOutput.innerText=colorPicker.value;
 addEventListener("input",event=>{
     if (isColorMode){
-        colorOutput.innerText=colorPicker.value;
         color=colorPicker.value;
     }
 })
@@ -76,8 +74,9 @@ erase.addEventListener("click",()=>{
 
 //resize
 resize.addEventListener("click",()=>{
-    inRow=prompt("Enter new grid width/height (1-100)");
-    console.log(inRow);
+    do{
+        inRow=prompt("Enter new grid width/height (1-100)");
+    }while (Number.isInteger(inRow)&&inRow>=1&&inRow<=100);
     degenerateGrid();
     generateGrid();
 })
