@@ -1,9 +1,20 @@
+*{
+    font-family:"Courier New","sans-serif"
+}
+
+.container{
+    background-color:#bababa;
+    padding:60px;
+    display:flex;
+
+}
+
 body{
     background-color:rgb(107 118 135);
 }
 
-.color-picker{
-    background-color:rgb(107 118 135);
+.header{
+    font-style
 }
 
 .grid-container{
@@ -13,6 +24,7 @@ body{
     border-color:black;
     display:flex;
     flex-wrap:wrap;
+    flex-shrink:0;
 }
 
 .square{

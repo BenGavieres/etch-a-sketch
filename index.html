@@ -8,12 +8,25 @@
 </head>
 <body>
     <div class="header">Etch-a-Sketch</div>
-    <div class="color-picker">
-        <input type="color" id="color">
-        <label for="color" id="color-output"></label>
+    
+    <div class="container">
+        <div class="controls">
+            <div class="color-picker">
+                <input type="color" id="color">
+                <label for="color" id="color-output"></label>
+            </div> 
+            <div class="erase">
+                <button class ="erase">Erase</button>
+            </div> 
+            <div class="resize">
+                <button class="resize">Resize</button>
+            </div>  
+            <div class="random-color">
+                <button class="random-color">Rainbow</button>
+            </div>
+        </div>
+        <div class="grid-container"></div>
     </div>
-    <div class="grid-container"></div>
     <script src="script.js"></script>
-   
 </body>
 </html>
