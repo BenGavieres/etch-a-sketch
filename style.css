@@ -1,3 +1,11 @@
+body{
+    background-color:rgb(107 118 135);
+}
+
+.color-picker{
+    background-color:rgb(107 118 135);
+}
+
 .grid-container{
     width:576px;
     height:576px;
